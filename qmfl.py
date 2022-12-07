@@ -30,7 +30,7 @@ def emojify(food:str) -> str:
               "tomate":"🍅",
               "kartoffel":"🥔",
               "mais":"🌽",
-              "reis":"🍚",
+              "duftreis":"🍚",
               "fisch":"🐠",
               "lachs":"🐟",
               "kabeljau":"🐟",
