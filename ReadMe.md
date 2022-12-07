@@ -20,15 +20,15 @@ Run main.py with different arguments
 | -d --days DAYS [DAYS ...] | days from today for which you want to display the menu today=0, tomorrow=1, ... only works for the current week |
 
 ## 🍭 Example
-To display the menue of today and tomorrow
+To display the menu of today and tomorrow
 ```
 python3 qmfl.py -d 0 1
 ```
-To display the the full menue with side dishes for the rest of the week
+To display the the full menu with side dishes for the rest of the week
 ```
 python3 qmfl.py -f -s
 ```
-To get the menue of today
+To get the menu of today
 ```
 python3 qmfl.py
 ```

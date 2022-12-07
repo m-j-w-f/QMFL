@@ -108,7 +108,7 @@ def pretty_print(name:str, dishes:list[str], prices:list[str], date:datetime, ar
     print()
 
 
-def print_menue(day: bs4.element.Tag, date:datetime, args: argparse.Namespace):
+def print_menu(day: bs4.element.Tag, date:datetime, args: argparse.Namespace):
     lines = day.find_all(class_="mensatype_rows")
     names = [line.find(class_="mensatype").get_text(separator=" ").strip() for line in lines]
     # Split day manually since bs4 doesn't work
@@ -159,17 +159,17 @@ def main():
     # fullweek
     if args.full == True:
         for day in canteen_days:
-            print_menue(day=day, date=now, args=args)
+            print_menu(day=day, date=now, args=args)
             now = now + TD
     # seleced days        
     elif args.days:
         for i, day in enumerate(canteen_days):
             if i in args.days:
-                print_menue(day=day, date=now, args=args)
+                print_menu(day=day, date=now, args=args)
             now = now + TD
     # only today
     else:
-        print_menue(day=canteen_days[0],date=now, args=args)
+        print_menu(day=canteen_days[0],date=now, args=args)
     
 if __name__ == "__main__":
     main()
