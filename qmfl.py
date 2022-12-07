@@ -127,11 +127,11 @@ def print_menu(day: bs4.element.Tag, date:datetime, args: argparse.Namespace):
 
 
 def main():
+    # Parse the command line arguments
+    args = parse_args()
     # Generate Spinner
     spinner = Halo(text="Preparing Food 🍕", spinner="dots", color="magenta")
     spinner.start()
-    # Parse the command line arguments
-    args = parse_args()
     
     URL = "https://www.sw-ka.de/de/hochschulgastronomie/speiseplan/mensa_adenauerring/"
     now = datetime.today()
