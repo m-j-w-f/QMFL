@@ -1,5 +1,3 @@
-#!/Users/moritzfeik/opt/anaconda3/bin/ python
-
 import argparse
 import bs4
 from bs4 import BeautifulSoup
