@@ -1,4 +1,4 @@
-# 🍕 Quick Mensa Food Lookup
+# 👨‍🍳 Quick Mensa Food Lookup
 
 A small command line tool to look up the food of the KIT mensa.
 
