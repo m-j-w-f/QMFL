@@ -18,6 +18,7 @@ def emojify(food:str) -> str:
               "burger":"🍔",
               "pommes":"🍟",
               "frites":"🍟",
+              "creme":"🍨",
               "salat":"🥗",
               "suppe":"🍜",
               "nudel":"🍝",
