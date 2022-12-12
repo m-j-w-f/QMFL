@@ -14,48 +14,55 @@ class color:
 
 
 def emojify(food:str) -> str:
-    emj_dict={"pizza":"🍕",
-              "burger":"🍔",
-              "pommes":"🍟",
-              "frites":"🍟",
-              "creme":"🍨",
-              "salat":"🥗",
-              "suppe":"🍜",
-              "nudel":"🍝",
-              "pasta":"🍝",
-              "fleisch":"🍖",
-              "steak":"🥩",
-              "obst":"🍏",
-              "tomate":"🍅",
-              "kartoffel":"🥔",
-              "mais":"🌽",
-              "duftreis":"🍚",
-              "fisch":"🐠",
-              "lachs":"🐟",
-              "kabeljau":"🐟",
-              "pfanne":"🥘",
-              "schwein":"🐖",
-              "hühn":"🐓",
-              "hähn":"🐓",
-              "wurst":"🌭",
-              "schinken":"🥓",
-              "gemüse":"🥦",
-              "brot":"🥖",
-              "baguette":"🥖",
-              "dessert":"🍦",
-              "karotte":"🥕",
-              "birne":"🍐",
-              "apfel":"🍎",
-              "käse":"🧀",
-              "gnocchi":"🥣",
-              "keule":"🍗",
-              "solidaritätsessen":"😀",
-              "spätausgabe":"🌚"}
+    emj_dict = {
+        "apfel":"🍎",
+        "baguette":"🥖",
+        "birne":"🍐",
+        "brot":"🥖",
+        "burger":"🍔",
+        "creme":"🍨",
+        "dessert":"🍦",
+        "duftreis":"🍚",
+        "fisch":"🐠",
+        "fleisch":"🍖",
+        "frites":"🍟",
+        "geflügel":"🐓",
+        "gemüse":"🥦",
+        "gnocchi":"🥣",
+        "gurke":"🥒",
+        "hähn":"🐓",
+        "hühn":"🐓",
+        "kabeljau":"🐟",
+        "karotte":"🥕",
+        "kartoffel":"🥔",
+        "käse":"🧀",
+        "keule":"🍗",
+        "lachs":"🐟",
+        "mais":"🌽",
+        "nudel":"🍝",
+        "obst":"🍏",
+        "pasta":"🍝",
+        "pfanne":"🥘",
+        "pizza":"🍕",
+        "pommes":"🍟",
+        "rind":"🥩",
+        "salat":"🥗",
+        "schinken":"🥓",
+        "schwein":"🐖",
+        "solidaritätsessen":"😀",
+        "spätausgabe":"🌚",
+        "steak":"🥩",
+        "suppe":"🍜",
+        "tomate":"🍅",
+        "wurst":"🌭"
+        }
     
     substrings = [substring for substring in emj_dict.keys() if substring in food.lower()]
     if substrings:
         emj_list = [emj_dict[sub] for sub in substrings]
         food = random.choice(emj_list) + food 
+    else:
+        food = "🍴" + food
     return food
 
 
