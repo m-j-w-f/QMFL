@@ -159,8 +159,12 @@ def main():
     except:
         spinner.fail("A BeautifulSoup🍜 exception occured")
         quit(1)
-    
+ 
     spinner.stop()
+    
+    if len(canteen_days) == 0:
+        print("😔 Some Error Occured while scraping Data")
+        quit(1)
     
     # fullweek
     if args.full == True:
